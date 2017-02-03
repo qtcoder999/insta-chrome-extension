@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "name": "DOM count",
-  "description": "This extension shows a count of DOM elements on current page",
-  "version": "1.0",
+  "description": "This extension shows a count of DOM elements on current page and refreshes every second. You can drag it around and click on extension icon to hide/show.",
+  "version": "1.2",
   "author": "Lukas Liesis https://www.linkedin.com/in/lukas-liesis-05335626",
   "browser_action": {
     "default_icon": "icon.png"
@@ -10,6 +10,11 @@
   "permissions": [
     "activeTab"
   ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
   "content_scripts": [
     {
       "matches": [
