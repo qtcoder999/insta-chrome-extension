@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "DOM count",
+  "description": "This extension shows a count of DOM elements on current page",
+  "version": "1.0",
+  "author": "Lukas Liesis https://www.linkedin.com/in/lukas-liesis-05335626",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "script.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
