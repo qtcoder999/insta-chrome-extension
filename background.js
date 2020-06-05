@@ -1,5 +1,9 @@
-chrome.runtime.onConnect.addListener(function (port) {
-  chrome.browserAction.onClicked.addListener(function (tab) {
-    port.postMessage({action: 'click_icon'});
+// this is the background code...
+
+// listen for our browerAction to be clicked
+chrome.browserAction.onClicked.addListener(function (tab) {
+  // for the current tab, inject the "inject.js" file & execute it
+  chrome.tabs.executeScript(tab.ib, {
+    file: "inject.js",
   });
 });

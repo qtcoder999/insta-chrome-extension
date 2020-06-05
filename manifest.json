@@ -1,29 +1,15 @@
 {
+  "name": "Instagram Likes Extractor",
+  "version": "0.1",
   "manifest_version": 2,
-  "name": "DOM count",
-  "description": "Show a count of DOM elements on the current page. Auto update. Draggable. Click on extension icon to hide/show.",
-  "version": "1.2",
-  "author": "Lukas Liesis https://www.linkedin.com/in/lukas-liesis-05335626",
-  "browser_action": {
-    "default_icon": "icon.png"
-  },
-  "permissions": [
-    "activeTab"
-  ],
+  "description": "",
+  "homepage_url": "https://github.com/qtcoder999",
   "background": {
-    "scripts": [
-      "background.js"
-    ]
+    "scripts": ["background.js"],
+    "persistent": true
   },
-  "content_scripts": [
-    {
-      "matches": [
-        "*://*/*"
-      ],
-      "js": [
-        "script.js"
-      ],
-      "run_at": "document_idle"
-    }
-  ]
+  "browser_action": {
+    "default_title": "Instagram Likes Extractor!"
+  },
+  "permissions": ["https://*/*", "http://*/*", "tabs"]
 }
