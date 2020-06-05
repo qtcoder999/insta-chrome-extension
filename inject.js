@@ -1,7 +1,10 @@
 (function () {
   const WEBSITE = "https://www.instagram.com";
 
-  if (window.location.href.indexOf(WEBSITE) > -1) {
+  const REGEX = /instagram\.com\/\w+\/$/g;
+
+  if (window.location.href.match(REGEX)) {
+    // if (window.location.href.indexOf(WEBSITE) > -1) {
     let likesArray = [];
     const watchedElement = document.querySelector("article.ySN3v");
     const DEBOUNCED_RATE = 4000;
@@ -218,6 +221,6 @@
       }
     })();
   } else {
-    alert("Invalid page! This tool would only work on instagram!");
+    alert("Sorry! This is not a valid instagram profile page!");
   }
 })();
