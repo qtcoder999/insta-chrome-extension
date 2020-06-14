@@ -193,9 +193,12 @@
     });
 
     const printOutput = () => {
+      let str = "";
       const output = removeDuplicates(likesArray);
       console.log(JSON.stringify(output, null, "\t"));
       disconnect = true;
+      output.map((single) => (str += single.href + "\n"));
+      console.log("Links in sorted manner:", str);
       alert("Output is ready, open developer console!");
     };
 
