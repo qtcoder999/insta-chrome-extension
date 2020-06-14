@@ -198,7 +198,7 @@
       console.log(JSON.stringify(output, null, "\t"));
       disconnect = true;
       output.map((single) => (str += single.href + "\n"));
-      console.log("Links in sorted manner:", str);
+      console.log("Links in sorted manner:\n", str);
       alert("Output is ready, open developer console!");
     };
 
